@@ -1,7 +1,7 @@
 # Introduction to Machine Learning
 ### 112 Autumn - Introduction to Machine Learning, 林彥宇, NYCU
 ## Contents
-- HW1 -
+- HW1 - Linear Regression, solved by closed-form solution and gradient descent
 - HW2 -
 - HW3 - Decision Tree
 - HW4 - Support Vector Machine (SVM)
