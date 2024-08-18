@@ -40,10 +40,10 @@ class LogisticRegression:
 class FLD:
     def __init__(self):
         self.w = None
-        self.m0 = None
-        self.m1 = None
-        self.sw = None
-        self.sb = None
+        self.m0 = None    # mean vector of class 0
+        self.m1 = None    # mean vector of class 1
+        self.sw = None    # within-class covariance matrix
+        self.sb = None    # between-class covariance matrix
         self.slope = None
 
     # This function computes the solution of Fisher's Linear Discriminant.
@@ -59,7 +59,7 @@ class FLD:
         sw_class0 = sw_class1 = [[0, 0], [0, 0]]
         for i in range(len(y)):
             if y[i]==0:
-                sw_class1 += np.outer(X[i]-self.m0, X[i]-self.m0)
+                sw_class0 += np.outer(X[i]-self.m0, X[i]-self.m0)
             else:
                 sw_class1 += np.outer(X[i]-self.m1, X[i]-self.m1)
         self.sw = sw_class0 + sw_class1
