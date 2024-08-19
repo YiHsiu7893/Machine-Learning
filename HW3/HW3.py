@@ -125,16 +125,16 @@ class DecisionTree():
         predictions = []
 
         for x in X:
-            curr = self.root
+            cur = self.root
 
             # Traverse the tree until a leaf node is reached
-            while curr.left is not None and curr.right is not None:
-                if x[curr.feature] <= curr.threshold:
-                    curr = curr.left
+            while cur.left is not None and cur.right is not None:
+                if x[cur.feature] <= cur.threshold:
+                    cur = cur.left
                 else:
-                    curr = curr.right
+                    cur = cur.right
 
-            predictions.append(curr.prediction)
+            predictions.append(cur.prediction)
 
         return np.array(predictions)
     
