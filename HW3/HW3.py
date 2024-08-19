@@ -110,7 +110,7 @@ class DecisionTree():
                 if leftNum==0 or rightNum==0:
                     continue
 
-                # Compute entropy after split
+                # Compute impurity after the split
                 e = (leftNum/Num) * self.impurity(y[leftBranch]) + (rightNum/Num) * self.impurity(y[rightBranch])
 
                 if e<MinEnt:
