@@ -1,4 +1,4 @@
-# Introduction to Machine Learning
+# Machine Learning
 ### 112 Autumn - Introduction to Machine Learning, 林彥宇, NYCU
 ## Contents
 - HW1 - Linear Regression, with solutions obtained through closed-form solution and gradient descent
