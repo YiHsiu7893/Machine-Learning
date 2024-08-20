@@ -28,9 +28,7 @@ def polynomial_kernel(x1, x2, degree=degree_):
 
 # Compute and return the rbf kernel between two vectors.
 def rbf_kernel(x1, x2, gamma=gamma_):
-    squ_dist = np.linalg.norm(x1-x2)**2
-    tmp = -squ_dist / (2*gamma**2)
-    return np.exp(tmp)
+    return np.exp(-np.linalg.norm(x1-x2)**2 / (2*gamma**2))
 
 # Do not modify the main function architecture.
 # You can only modify the hyperparameter C of the SVC class.
